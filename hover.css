@@ -15,3 +15,58 @@ body {
     align-items: center;
     height: 100vh;
 }
+
+.card {
+    width: 250px;
+    height: 200px;
+    color: white;
+    margin: 1em;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 1.5em;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+}
+
+.card::before, .card::after {
+    content: '';
+    position: absolute;
+    background: #171717;
+    width: 100%;
+    height: 40%;
+    z-index: -10;
+    border-radius: 15px 15px 0 0;
+    transition: all .4s;
+}
+
+.card::before {
+    top: 0;
+}
+
+.card:hover::before {
+    transform: translateY(-20px);
+}
+
+.card::after {
+    bottom: 10px;
+    height: 60%;
+    border-radius: 0 0 15px 15px;
+}
+
+.icon {
+    width: 60px;
+    height: 60px;
+    background: #DA0037;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+
+
+
